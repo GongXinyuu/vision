@@ -176,6 +176,8 @@ class AlexnetTester(ClassificationModelTester):
 
 
 
+# TODO add test for aux_logits arg to factory method
+# TODO add test for transform_input arg to factory method
 class InceptionV3Tester(ClassificationModelTester):
     def _get_input_shape(self):
         return (1, 3, 299, 299)
@@ -194,6 +196,7 @@ class SqueezenetTester(ClassificationModelTester):
 
 
 
+# TODO add test for width_mult arg to factory method
 class MobilenetTester(ClassificationModelTester):
     def test_mobilenet_v2(self):
         self._test_classification_model(models.mobilenet_v2)
@@ -203,6 +206,8 @@ class MobilenetTester(ClassificationModelTester):
 
 
 
+# TODO add test for aux_logits arg to factory method
+# TODO add test for transform_input arg to factory method
 class GooglenetTester(ClassificationModelTester):
     def test_googlenet(self):
         self._test_classification_model(models.googlenet)
@@ -236,6 +241,7 @@ class VGGNetTester(ClassificationModelTester):
 
 
 
+# TODO add test for dropout arg to factory method
 class MNASNetTester(ClassificationModelTester):
     def test_mnasnet0_5(self):
         self._test_classification_model(models.mnasnet0_5)
@@ -251,6 +257,8 @@ class MNASNetTester(ClassificationModelTester):
 
 
 
+# TODO add test for bn_size arg to factory method
+# TODO add test for drop_rate arg to factory method
 class DensenetTester(ClassificationModelTester):
     def _test_densenet_plus_mem_eff(self, model_callable):
         model, test_input, test_output = self._test_classification_model(model_callable)
@@ -293,6 +301,8 @@ class ShufflenetTester(ClassificationModelTester):
 
 
 
+# TODO add test for zero_init_residual arg to factory method
+# TODO add test for norm_layer arg to factory method
 class ResnetTester(ClassificationModelTester):
     def _get_scriptability_value(self):
         return True
